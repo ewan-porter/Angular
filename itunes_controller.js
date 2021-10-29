@@ -45,7 +45,7 @@ var iTunesController = function ($scope, $http) {
         animateResultsIn(results)
 
 //use jsonp callback function
-        $http.jsonp('http://itunes.apple.com/search', {
+        $http.jsonp('https://itunes.apple.com/search', {
             params: {
                 'callback': 'JSON_CALLBACK',
                 'term': artist
