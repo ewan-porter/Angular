@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" data-ng-app>
 
 
 <!-- header info -->
@@ -37,7 +37,7 @@
                 <div class="container">
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
+                        data-bs-target="#navbarToggler" aria-controls="navbarToggler navbarToggler2" aria-expanded="false"
                         aria-label="Toggle navigation" id="navbarButton"><img src="images/menu.png" alt="hamburger icon">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -55,7 +55,7 @@
                     <img data-aos="fade-down" data-aos-anchor=".search-page" data-aos-anchor-placement="top-top"
                         id="miniLogo" class="navbar-brand d-none d-lg-block  mx-auto" src="images/mini-logo.svg" alt="mini logo">
 
-                    <div class="navbar-collapse collapse" id="navbarToggler">
+                    <div class="navbar-collapse collapse" id="navbarToggler2">
                         <ul class="nav navbar-nav mx-auto">
 
 
@@ -78,14 +78,14 @@
     </div>
 
     <!-- Search section -->
-    <section ng-controller="iTunesController">
+    <section data-ng-controller="iTunesController">
         <div class="search-page" id="search">
             {{error}}
             <div class="container">
                 <h2>Search</h2>
-                <form name="search" ng-submit="searchiTunes(artist)" data-aos="fade-up" data-aos-anchor=".search-page"
+                <form name="search" data-ng-submit="searchiTunes(artist)" data-aos="fade-up" data-aos-anchor=".search-page"
                     data-aos-anchor-placement="top-top" data-aos-once="true">
-                    <input type="search" class="form-control" required placeholder="Artist" ng-model="artist" />
+                    <input type="search" class="form-control" required placeholder="Artist" data-ng-model="artist" />
                     <div class="text-center py-2">
                         <button type="submit" id="submitBtn" class="btn btn-light">Submit</button>&nbsp;</div>
                 </form>
@@ -107,13 +107,13 @@
             </div>
 
             <!-- Search results display -->
-            <div class="container" ng-show="songs">
+            <div class="container" data-ng-show="songs">
                 <h2 id="resultsHeading" class="results__heading">Results</h2>
                 <div class="song-grid-container" id="results">
 
-                    <div class="row gx-5 result-container" ng-repeat="song in songs">
+                    <div class="row gx-5 result-container" data-ng-repeat="song in songs">
                         <div class="col-3 artwork-grid">
-                            <div class="artwork"><img ng-src="{{song.artworkUrl100}}" alt="{{ song.collectionName }}" />
+                            <div class="artwork"><img data-ng-src="{{song.artworkUrl100}}" alt="{{ song.collectionName }}" />
                             </div>
                         </div>
                         <div class="col results">
