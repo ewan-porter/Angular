@@ -138,7 +138,7 @@
             <div class="vouchers__container">
                 <div class="voucher__child">
                     <img src="images/voucher-5.png" alt="voucher">
-                    <select class="form-select">
+                    <select id="voucher5" class="form-select">
                         <option selected>Quantity</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -154,7 +154,7 @@
 
                 <div class="voucher__child">
                     <img src="images/voucher-10.png" alt="voucher">
-                    <select class="form-select">
+                    <select id="voucher10" class="form-select">
                         <option selected>Quantity</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -169,7 +169,7 @@
                 </div>
                 <div class="voucher__child">
                     <img src="images/voucher-15.png" alt="voucher">
-                    <select class="form-select">
+                    <select id="voucher15" class="form-select">
                         <option selected>Quantity</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -184,21 +184,21 @@
                 </div>
             </div>
 
-            <form>
+            <form id="orderForm">
                 <div class="row my-3">
                     <div class="col">
-                        <input type="text" class="form-control" required placeholder="First Name"
+                        <input type="text" class="form-control" required id="fname" placeholder="First Name"
                             aria-label="First name">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" required placeholder="Last Name" aria-label="Last name">
+                        <input type="text" class="form-control" required id="lname" placeholder="Last Name" aria-label="Last name">
                     </div>
                 </div>
-                <input type="text" class="form-control my-3" required placeholder="Email" aria-label="Email">
+                <input type="text" class="form-control my-3" required id="email" placeholder="Email" aria-label="Email">
                 <textarea class="form-control my-3" required placeholder="Message" rows="4"></textarea>
                 <input type="text" class="form-control my-3" required placeholder="Address 1" aria-label="Address 1">
                 <input type="text" class="form-control my-3" required placeholder="Address 2" aria-label="Address 2">
-                <input type="text" class="form-control my-3" placeholder="Email" aria-label="Email">
+                
                 <div class="row">
                     <div class="col">
                         <input type="text" class="form-control" placeholder="City" required aria-label="City">
@@ -208,9 +208,12 @@
                     </div>
                 </div>
                 <div class="d-grid gap-2 my-3">
-                    <button class="btn btn-light" type="submit">Submit</button>
+                    <button class="btn btn-light" id="orderSubmit" type="submit">Submit</button>
                 </div>
             </form>
+            <div id="orderConfirm">
+
+            </div>
         </div>
 
     </section>
@@ -220,21 +223,21 @@
         <div class="container row">
             <h2>Contact</h2>
             <div class="contact__form col-md">
-                <form>
+                <form id="messageForm">
                     <div class="row my-3">
                         <div class="col">
-                            <input type="text" class="form-control" required placeholder="First Name"
+                            <input type="text" class="form-control" required id="fname2" placeholder="First Name"
                                 aria-label="First name">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" required placeholder="Last Name"
+                            <input type="text" class="form-control" required id="lname2" placeholder="Last Name"
                                 aria-label="Last name">
                         </div>
                     </div>
-                    <input type="text" class="form-control my-3" placeholder="Email" aria-label="Email">
-                    <textarea class="form-control my-3" required placeholder="Message" rows="4"></textarea>
+                    <input type="text" class="form-control my-3" id="email2" placeholder="Email" aria-label="Email">
+                    <textarea class="form-control my-3" required id="message" placeholder="Message" rows="4"></textarea>
                     <div class="d-grid gap-2 my-3">
-                        <button class="btn btn-light" type="submit">Submit</button>
+                        <button class="btn btn-light" id="contactSubmit" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
